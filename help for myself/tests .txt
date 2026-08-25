@@ -1,0 +1,54 @@
+
+   -- TEST
+       bone.createbone(320, -50, 20, "down", 0, 12)
+    bone.createbone(200, -100, 25, "down", 0, 12)
+    bone.createbone(450, -150, 18, "down", 0, 12)
+
+     bottom spawn (going up)
+    bone.createbone(300, 600, 22, "up", math.pi, 12)
+    bone.createbone(150, 650, 18, "up", math.pi, 12)
+
+     left spawn (moving right)
+      bone.createbone(-50, 240, 20, "right", math.pi / 2, 12)
+    bone.createbone(-120, 300, 26, "right", math.pi / 2, 12)
+
+     right spawn (moving left)
+    bone.createbone(700, 200, 22, "left", math.pi * 1.5, 12)
+    bone.createbone(800, 350, 10, "left", math.pi * 1.5, 12)
+
+
+
+    if love.keyboard.isDown("h") then
+       -- soul.hp = soul.hp +1
+    elseif love.keyboard.isDown("g") then
+        soul.kr = soul.kr +1
+    elseif love.keyboard.isDown("f") then
+        soul.hp = soul.hp -1
+    end
+
+
+    if key == "1" then
+        battleBox:resize(200, 150, 240, 140, 200)
+    elseif key == "2" then
+        battleBox:resize(100, 100, 440, 280, 400)
+    elseif key == "3" then
+        battleBox:resize(230, 240, 140, 140, 600)
+    end
+    
+
+    if key == "w" then
+        soul.mode = "blue"
+        soul.direction = "up"
+    elseif key == "s" then
+        soul.mode = "blue"
+        soul.direction = "down"
+    elseif key == "a" then
+        soul.mode = "blue"
+       soul.direction = "left"
+    elseif key == "d" then
+        soul.mode = "blue"
+        soul.direction = "right"
+    elseif key == "q" then
+        soul.mode = "red"
+ end
+
